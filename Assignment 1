@@ -126,14 +126,21 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <!-- Video Section -->
-  <section id="video-section">
-    <video controls loop="" autoplay="">
-      <source src=][pMYself.mp4" type="Mp4/videos">
-      
-    </video>
+  <html>
+      <head>
+          <title>HTML-5 Video Example</title>
+          <link rel="MYself" type="text/css" href="style.css">
+          <script src="MYself.mp4" defer></script>
+      </head>
+      <body>
+          <video id="recording" controls width="320" height="240" poster="on_record.png" loop preload="auto" autoplay muted>
+              <source src="on_record.mp4" type="video/mp4">
+              <source src="on_record.ogv" type="video/ogv">
+          </video>
+          <br>
+          <button onclick="playPause()">Play or pause the video</button> 
+      </body>
+  </html>
   </section>
 
   <!-- Contact Me Section -->
