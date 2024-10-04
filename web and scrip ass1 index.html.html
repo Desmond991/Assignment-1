@@ -117,6 +117,24 @@
       bottom: 0%;
       width: 100%;
     }
+
+    /* Button styling */
+    #buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: rgb(74, 221, 160);
+      color: rgb(111, 43, 156);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #buttons button:hover {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      transition: 0.3s;
+    }
+
   </style>
 </head>
 <body>
@@ -132,7 +150,16 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-      <head>
+  </header>
+
+  <!-- Buttons for Home, Projects, Blogs, and Contact -->
+  <section id="buttons">
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="scrollToSection('home')">Home</button>
+      <button onclick="scrollToSection('projects')">Projects</button>
+      <button onclick="scrollToSection('blogs')">Blogs</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+    </div>
   </section>
 
   <!-- Contact Me Section -->
@@ -202,10 +229,18 @@
   <footer>
     <p>&copy; 2024 - Your Email: Jidechukwu.aguh@ontariotechu.network</p>
   </footer>
-</body>
+
   <!-- End Footer -->
 
   <script>
+    // Scroll to the corresponding section
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
     // Function to play or pause the video
     function playPause() {
       var video = document.querySelector('video');
@@ -222,24 +257,4 @@
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
       var phone = document.getElementById('phone').value;
-      var comments = document.getElementById('comments').value;
-  
-      // Alert a basic confirmation (this can be expanded to send actual data via backend)
-      alert('Thank you, ' + name + '. We have received your message and will reach out soon!');
-  
-      // Optionally, you can reset the form here
-      this.reset();
-    });
-  
-    // Image hover effect (Optional: add some effect to project images)
-    document.querySelectorAll('.projectImg img').forEach(function(img) {
-      img.addEventListener('mouseover', function() {
-        img.style.transform = 'scale(1.1)';
-        img.style.transition = 'transform 0.3s ease';
-      });
-      
-      img.addEventListener('mouseout', function() {
-        img.style.transform = 'scale(1)';
-      });
-    });
-  </script>
+     
