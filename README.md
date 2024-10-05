@@ -1,1 +1,1 @@
-# Assignment-1
+# Assignment-1 I got the styling ideal from the TA's document but i decided to make my a bit easy to understand. The background photo was from the internet. My video blogs where from Tiktok as my own personal video was too large to be sent as a commit And also my Project photo was from the internet too.
